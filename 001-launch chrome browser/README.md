@@ -1,6 +1,6 @@
 # Launch Chrome Browser
 
-This repository contains Selenium scripts to automate various browser actions using Java. Each program demonstrates key functionalities and methods in Selenium WebDriver, aimed at helping users understand browser automation.
+This setup and description should help you understand how the OpenChrome class works and how to use it for basic browser automation tasks.
 
 ## Package: `programs`
 
