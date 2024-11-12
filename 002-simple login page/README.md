@@ -90,7 +90,9 @@ public class SimpleLoginPage {
 ```
 
 ---
+
  ### Output:
+ 
 ![image](https://github.com/user-attachments/assets/12987b98-4921-4e4f-9d13-98b2415519c6)
 
  ---
