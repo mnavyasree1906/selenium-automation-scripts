@@ -41,7 +41,7 @@ The `OpenChrome` class provides an example of how to automate actions in a Chrom
    - `driver.close()` closes the current window.
    - `driver.quit()` closes all browser windows associated with the WebDriver instance.
 
-#### Code
+#### Code:
 
 ```java
 package programs;
@@ -86,5 +86,7 @@ public class OpenChrome {
 }
 
 ```
+### Output:
+![image](https://github.com/user-attachments/assets/f34908e4-ba99-4bb7-bad1-3be7cd9bc7e7)
 
 ---
