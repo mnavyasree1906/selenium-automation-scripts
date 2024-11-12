@@ -37,10 +37,13 @@ The `SimpleLoginPage` class demonstrates how to automate the login process on a 
 ```java
 package programs;
 
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SimpleLoginPage {
 
@@ -66,6 +69,17 @@ public class SimpleLoginPage {
             // Step 4: Click on the Submit button
             WebElement submitButton = driver.findElement(By.id("submit"));
             submitButton.click();
+            
+            // Step 5: Assert for success message
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".has-text-align-center")));
+            String messageText = successMessage.getText();
+            if (messageText.contains("Congratulations student. You successfully logged in!") || messageText.contains("Logged In Successfully")) {
+                System.out.println("Login successful: " + messageText);
+            } else {
+                System.out.println("Login failed or unexpected result.");
+            }
+
 
         } finally {
             // Close the browser
@@ -77,6 +91,6 @@ public class SimpleLoginPage {
 
 ---
  ### Output:
- ![image](https://github.com/user-attachments/assets/1e1d32e9-8422-4e35-a5a3-04df086e027a)
+![image](https://github.com/user-attachments/assets/12987b98-4921-4e4f-9d13-98b2415519c6)
 
  ---
